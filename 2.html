@@ -1,0 +1,64 @@
+<!-- 
+    Operator
+    1. +, -, /, *,
+-->
+
+
+<script>
+    const nilai1 = 10;
+    const nilai2 = parseInt(10);
+    const jumlah = nilai1 + nilai2; //concanate (+): penggabung string
+
+    //console.log(): salah satu fitur buat melihat hasil daripada variable yang ingin di cetak
+    console.log(jumlah);
+
+    // assignment operator : menambahkan nilai ke dalam suatu variable
+    let total = 100;
+    total += 50;
+    total -= 20;
+
+    console.log(total); //150
+
+    // operator increment dan decrement : menambah dan mengurang
+    let nomor = 1;
+    nomor++;
+    nomor++;
+    nomor--;
+
+    // operator perbandingan : < (lebih kecil), > (lebih besar), ===(membandingkan sampai ke tipe data),
+    //  ==(membandingkan) !== (tidak samadengan)
+
+    let nama = "budi"
+    let confirmasiNama = 10;
+    let confirmasi = (nama == confirmasiNama); // true;
+    console.log(nama !== "budi");
+    let umur = 17;
+    let batasUmur = 17;
+    let batasan = (umur >= 17); //false;
+    // 0, 1, 2
+    let a = 0;
+    let value = (a > 1); //
+
+
+    // operator logika : &&, OR !
+    let budi = "Budi";
+    let andi = "Andi";
+
+    let username = "admin";
+    let password = "admin";
+
+    (username === "admin123" && password === "admin123") //login gagal
+        (username === "admin" || password === "admin123") //login berhasil //true
+    // 'Or=1'
+
+    // operator ternary
+    const age = 20;
+    if (age >= 17) {
+        console.log('Dewasa')
+    } else {
+        console.log('Anak-anak')
+    }
+
+    const statusAge = age >= 17 ? 'Dewasa':'Anak-anak'
+    console.log(statusAge);
+</script>

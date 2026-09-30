@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+
+
+</head>
+
+<body>
+    <h1 id="heading" class="heading">Selamat Datang di PPKD Jakarta Pusat</h1>
+    <p id="isiText"></p>
+    <h3>Tes 1</h3>
+    <h3>Tes 2</h3>
+    <h3>Tes 3</h3>
+
+
+
+</body>
+
+</html>
+
+
+<!-- 
+    object : struktur data {}
+-->
+
+<script>
+
+    const heading = document.querySelector('h1');
+    const headingId = document.getElementById('heading');
+    const headingClass = document.getElementsByClassName('heading');
+    const heading3 = document.querySelector('h3');
+    const heading3All = document.querySelectorAll('h3');
+    console.log(heading3All);
+
+    // const heading = document.querySelector('#heading');
+    // const heading = document.querySelector('.heading');
+    // const heading = document.querySelector('h1');
+
+    document.getElementById('isiText').innerText = "PPKD Jakarta Pusat";
+    heading3.innerText = "DUARRR"
+    // innerText : 
+    // textContent:
+    // innerHtml
+    heading.innerText = "Selamat Datang di Pusat Pelatihan Kerja Jakarta Pusat"
+    heading.textContent = "Selamat Datang di Pusat Pelatihan Kerja Jakarta Pusat"
+    heading.innerHTML = "Selamat Datang di <u>Pusat Pelatihan Kerja Jakarta Pusat</u>"
+
+
+
+    let peserta = {
+        nama: "Reza",
+        alamat: "Bekasi Jawa Barat",
+        jurusan: "Web Programming",
+
+    }
+    // object
+    console.log(peserta.nama);
+    console.log(peserta.jurusan);
+    console.log(peserta["alamat"]);
+
+    peserta.nilai = 80;
+    console.log(peserta);
+
+    delete peserta.nilai;
+    peserta.status = "Baru";
+    peserta['email'] = "reza@gmail.com"; //associative
+    console.log(peserta);
+
+    const siswa = [
+        {
+            id: 1,
+            nama: "Rudi",
+            nilai: 80
+        },
+        {
+            id: 2,
+            nama: "Wawan",
+            nilai: 50
+        },
+        {
+            id: 3,
+            nama: "Ratna",
+            nilai: 75
+        }
+    ]
+
+    console.log(siswa); //0, 1, 2,
+    console.log(siswa[0].nama); //rudi
+    console.log(siswa[1].nama); //Wawan
+    console.log(siswa[2].nama); //Ratna
+    // looping: foreach
+    siswa.forEach(function (data, index) {
+        console.log("siswa", data);
+    }); //function biasa
+
+    // es 6 : ecmascript
+    siswa.forEach((data, index) => {
+
+        console.log("data siswa", data);
+        console.log(`data siswa  dengan index ${index} yaitu bernama ${data.nama}`);
+    }); //arrow function
+
+    const siswaLulus = siswa.filter((s) => {
+        return s.nilai >= 75;
+    })
+
+    console.log(siswaLulus);
+
+
+</script>

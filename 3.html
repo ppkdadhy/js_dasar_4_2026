@@ -1,0 +1,62 @@
+<!-- 
+    if statement:
+-->
+
+<script>
+    const nilai = 80;
+    const lulus = 75;
+    if (nilai >= lulus) {
+        console.log("Selamat, anda lulus");
+    } else {
+        console.log("Selamat, anda tidak lulus");
+    }
+
+    // !: not
+    // !empty : tidak kosong
+    const warna = "Biru";
+    if (warna !== "Biru") {
+        console.log("Ia betul biru");
+    } else {
+        console.log("bukan biru");
+    }
+
+    // banyak if, pengecekkan banyak statement dan kondisi
+    // else if
+
+    const totalBelanja = 300000
+    const isMember = true;
+    let diskon = 0;
+
+    if (isMember && totalBelanja >= 1500000) {
+        diskon = 0.5; //Diskon 10%
+    } else if (totalBelanja >= 500000) {
+        diskon = 0.1 //Diskon 20%;
+    } else {
+        diskon = 0;
+    }
+    const potongan = totalBelanja * diskon;
+    const bayar = totalBelanja - potongan;
+
+    // template literal
+    // ``: backtik
+
+    // console.log("Potongan harga : ", potongan)
+    console.log(`Total Belanja : ${totalBelanja}`)
+    console.log(`Potongan harga : ${potongan}`)
+    console.log(`Total Bayar  : ${bayar}`)
+
+
+    // switch
+
+    const color = "Merah";
+    switch (color) {
+        case "Biru":
+            console.log("Iya biru");
+            break;
+        case "Merah":
+            console.log("Iya merah");
+            break;
+        default:
+            console.log("Bukan biru");
+    }       
+</script>
