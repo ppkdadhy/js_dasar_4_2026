@@ -1,0 +1,9 @@
+GET: READ Data
+POST: mengirim data melalui sebuah form
+  - INSERT, UPDATE, DELETE
+PUT: mengirim data melalui sebuah form
+  - UPDATE
+PATCH: mengirim data melalui sebuah form
+  - UPDATE Data cuma 1
+DELETE/GET: menghapus data
+  - DELETE
