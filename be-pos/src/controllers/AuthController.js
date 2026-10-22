@@ -21,6 +21,7 @@ export const login = async (req, res) => {
   // const user = USERS.find((u) => u.email === email && u.password === password);
 
   const [user] = await pool.query("SELECT id, name, email, password FROM users WHERE email= ?", [email]);
+  console.log(user);
   // email : unik
 
   if (user.length === 0) {
