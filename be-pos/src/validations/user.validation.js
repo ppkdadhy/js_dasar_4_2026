@@ -1,7 +1,7 @@
 import Joi from "joi";
 // create
 export const createSchema = Joi.object({
-  name: Joi.string().trim().required(),
+name: Joi.string().trim().required(),
   email: Joi.string().trim().email().required().messages({
     "string.empty": "Email cannot be empty",
     "string.email": "The email format must be an email address",
